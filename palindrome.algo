@@ -1,0 +1,15 @@
+FUNCTION is_palindrome(s : STRING) : BOOLEAN
+VAR
+    i : INTEGER := 0;
+    l : INTEGER := s.length - 1;
+BEGIN
+    IF (i >= l) THEN
+        RETURN TRUE;
+    ELSE_IF (s[i] = s[l]) THEN
+        i := i + 1;
+        l := l - 1;
+        RETURN is_palindrome(s);
+    ELSE
+        RETURN FALSE;
+    END_IF
+END
